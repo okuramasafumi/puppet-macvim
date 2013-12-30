@@ -8,9 +8,10 @@ class macvim {
   case $::osfamily {
     'Darwin': {
       package { 'macvim':
-        ensure          => installed,
+        ensure          => latest,
         install_options => [
           '--with-cscope',
+          '--with-lua',
           '--override-system-vim',
           ];
       }
