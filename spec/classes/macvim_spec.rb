@@ -6,8 +6,8 @@ describe "macvim" do
   it do
     should contain_class("macvim")
     should contain_package("macvim").with({
-      :ensure          => "installed",
-      :install_options => ['--with-cscope','--override-system-vim']
+      :ensure          => "latest",
+      :install_options => ['--with-cscope', '--with-lua', '--override-system-vim']
     })
   end
 end
